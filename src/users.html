@@ -1,0 +1,41 @@
+<div class="container" >
+
+  <div class="row" ng-repeat="user in users">
+    <md-card class="userscard" layout="column" layout-align="star end">
+      <span class="imagetormenta">
+      <h2 style="color:white; margin-top:260px; margin-left:20px;">{{user.name}}</h2>
+      <div layout="row">
+
+      <img src="assets/images/ic_location_on_white_48px.svg">
+      <h3 style="color:white;margin-right:1000px;">{{user.address.city}}</h3>
+      </div>
+      <div layout="row" layout-align="end end">
+        <md-button class="md-fab md-primary" ng-click="call_post_view(user)">
+          <md-icon class="material-icons">add_circle_outline</md-icon>
+        </md-button>
+      </div>
+    </span>
+    </md-card>
+
+  </div>
+
+</div>
+<style>
+  .md-toolbar-tools {
+    background-color: #4f6ef7;
+  }
+  .userscard{
+
+    background: url("assets/images/tigre.png") ;
+
+    background-size: cover;
+    height: 25%;
+    width: 100%;
+background-position:center;
+  }
+.imagetormenta{
+  background: -moz-linear-gradient(top, rgba(140,146,153,0) 0%, rgba(141,147,154,0) 1%, rgba(192,204,214,0.51) 51%, rgba(186,201,221,0.59) 59%, rgba(11,11,20,1) 100%); / FF3.6-15 /
+background: -webkit-linear-gradient(top, rgba(140,146,153,0) 0%,rgba(141,147,154,0) 1%,rgba(192,204,214,0.51) 51%,rgba(186,201,221,0.59) 59%,rgba(11,11,20,1) 100%); / Chrome10-25,Safari5.1-6 /
+background: linear-gradient(to bottom, rgba(140,146,153,0) 0%,rgba(141,147,154,0) 1%,rgba(192,204,214,0.51) 51%,rgba(186,201,221,0.59) 59%,rgba(11,11,20,1) 100%); / W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ /
+}
+</style>
